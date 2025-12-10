@@ -6,23 +6,23 @@ namespace Studentadministrasjonssystem
 {
     internal class Student
     {
-        public int _studentID { get; set; }
-        public string _name { get; set; }
-        public int _age { get; set; }
-        public string _studyProgram { get; set; }
+        public int StudentID { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string StudyProgram { get; set; }
 
 
         public Student(int studentId, string name, int age, string studyProgram)
         {
-            _studentID = studentId;
-            _name = name;
-            _age = age;
-            _studyProgram = studyProgram;
+            StudentID = studentId;
+            Name = name;
+            Age = age;
+            StudyProgram = studyProgram;
         }
 
-        public static void SkrivUtInfo()
+        public void SkrivUtInfo()
         {
-            Console.WriteLine($"StudentId: {_studentID} \nNavn: {_name} \nAlder: {_age}\nStudieProgram: {_studyProgram}");
+            Console.WriteLine($"StudentId: {StudentID} \nNavn: {Name} \nAlder: {Age}\nStudieProgram: {StudyProgram}");
         }
     }
 }

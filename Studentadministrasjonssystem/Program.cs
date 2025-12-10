@@ -15,7 +15,12 @@
         }
         public static void SkrivUtAllInfo()
         {
-            students[0].SkrivUtInfo();
+            for (int i = 0; i < students.Count; i++)
+            {
+                students[i].SkrivUtInfo();
+            }
+
+
         }
     }
 }
