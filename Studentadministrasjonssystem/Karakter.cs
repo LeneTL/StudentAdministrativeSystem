@@ -6,8 +6,8 @@ namespace Studentadministrasjonssystem
 {
     internal class Karakter
     {
-        private int Student { get; set; }
-        private string Fag { get; set; }
+        private Student Student { get; set; }
+        private Fag Fag { get; set; }
         private int Karakterverdi { get; set; }
       
         
