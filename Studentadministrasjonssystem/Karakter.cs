@@ -6,15 +6,20 @@ namespace Studentadministrasjonssystem
 {
     internal class Karakter
     {
-        private Student Student { get; set; }
-        private Fag Fag { get; set; }
-        private int Karakterverdi { get; set; }
-      
-        
+        public Student Student { get; set; }
+        public Fag Fag { get; set; }
+        public int Karakterverdi { get; set; }
+
+        public Karakter(Student student, Fag fag, int karakterverdi)
+        {
+            Student = student;
+            Fag = fag;
+            Karakterverdi = karakterverdi;
+        }
+
         public void SkrivUtInfo()
         {
-            Console.WriteLine();
-
+            Console.WriteLine($"Student: {Student.Name}, \nFag: {Fag.FagNavn}, \nKarakterverdi: {Karakterverdi}");
 
         }
     }

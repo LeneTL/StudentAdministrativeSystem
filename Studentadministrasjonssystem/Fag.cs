@@ -6,9 +6,9 @@ namespace Studentadministrasjonssystem
 {
     internal class Fag
     {
-        private int FagKode { get; set; }
-        private string FagNavn { get; set; }
-        private int AntallStudiepoeng { get; set; }
+        public int FagKode { get; set; }
+        public string FagNavn { get; set; }
+        public int AntallStudiepoeng { get; set; }
 
         public Fag(int fagkode, string fagnavn, int antallStudiepoeng)
         {

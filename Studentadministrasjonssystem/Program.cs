@@ -1,9 +1,10 @@
 ﻿namespace Studentadministrasjonssystem
 {
     internal class Program
-    {
+    {// I apologize for the mix of norwegian and english in this! bad practice, I know
         private static List<Student> students;
         private static List<Fag> subjects;
+        private static List<Karakter> karakterer;
         static void Main()
         {
             students = new List<Student>
@@ -18,6 +19,14 @@
                 new Fag(84, "C#", 80),
                 new Fag(75, "Kiropraktor", 10),
             };
+            karakterer = new List<Karakter>
+            {
+                new Karakter(students[0], subjects[0], 6),
+                new Karakter(students[0], subjects[2], 4),
+                new Karakter(students[1], subjects[1], 3),
+                new Karakter(students[1], subjects[3], 4),
+
+            };
 
             SkrivUtAllInfo();
         }
@@ -27,7 +36,7 @@
             Console.WriteLine("~~~~~~~~~~");
             //for (int i = 0; i < students.Count; i++)
             //{
-            //    Console.WriteLine("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*");
+
             //    students[i].SkrivUtInfo();
             //    Console.WriteLine("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*");
             //}
@@ -44,6 +53,14 @@
             {
                 fag.SkrivUtInfo();
                 Console.WriteLine("*--------------------------------*");
+            }
+
+            Console.WriteLine("Karakter:");
+            Console.WriteLine("^v^v^v^v^v");
+            foreach (Karakter karakter in karakterer)
+            {
+                karakter.SkrivUtInfo();
+                Console.WriteLine("*^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^*");
             }
         }
     }
