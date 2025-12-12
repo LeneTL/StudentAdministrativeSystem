@@ -32,18 +32,25 @@ namespace Studentadministrasjonssystem
 
             };
 
+            foreach (var student in students)
+            {
+                foreach (var karakter in karakterer)
+                {
+                    if (student.StudentID == karakter.Student.StudentID)
+                    {
+
+                        student.LeggTilKarakter(karakter);
+                    }
+                }
+            }
+
+
             SkrivUtAllInfo();
         }
         public void SkrivUtAllInfo()
         {
             Console.WriteLine("Studenter:");
             Console.WriteLine("~~~~~~~~~~");
-            //for (int i = 0; i < students.Count; i++)
-            //{
-
-            //    students[i].SkrivUtInfo();
-            //    Console.WriteLine("*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*");
-            //}
             foreach (Student student in students)
             {
                 student.SkrivUtInfo();
@@ -59,13 +66,13 @@ namespace Studentadministrasjonssystem
                 Console.WriteLine("*--------------------------------*\n");
             }
 
-            Console.WriteLine("Karakter:");
-            Console.WriteLine("----____----");
-            foreach (Karakter karakter in karakterer)
-            {
-                karakter.SkrivUtInfo();
-                Console.WriteLine("*____----____----____----____----*\n");
-            }
+            //Console.WriteLine("Karakter:");
+            //Console.WriteLine("----____----");
+            //foreach (Karakter karakter in karakterer)
+            //{
+            //    karakter.SkrivUtInfo();
+            //    Console.WriteLine("*____----____----____----____----*\n");
+            //}
         }
     }
 }
